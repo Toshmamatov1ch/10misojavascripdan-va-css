@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-image: url("https://themeybe.com/wp-content/uploads/2021/06/note-book.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
+}
+
+.menu-bar {
+  background: rgb(0, 100, 0);
+  text-align: center;
+}
+
+.menu-bar ul {
+  display: inline-flex;
+  list-style: none;
+}
+
+.menu-bar ul li {
+  width: 150px;
+  margin: 15px;
+  padding: 15px;
+}
+
+.menu-bar ul li a {
+  text-decoration: none;
+  color: #fff;
+
+  i {
+    margin-right: 8px;
+  }
+}
+
+.active,
+.menu-bar ul li:hover {
+  background: #2bab0d;
+  border-radius: 3px;
+}
+
+.sub-menu-1 {
+  display: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 {
+  display: block;
+  position: absolute;
+  background-color: rgb(0, 100, 0);
+  margin-right: 15px;
+  margin-left: -15px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul {
+  display: block;
+  margin: 10px;
+  color: #fff;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li {
+  width: 150px;
+  padding: 10px;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  border-radius: 0;
+  text-align: left;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child {
+  border-bottom: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover {
+  color: #b2ff00;
+}
+
+.sub-menu-1 ul li .fa {
+  float: right;
+}
+
+.sub-menu-2 {
+  display: none;
+}
+
+.hover-me:hover .sub-menu-2 {
+  display: block;
+  position: absolute;
+  margin-top: -40px;
+  margin-left: 140px;
+  background: rgb(0, 100, 0);
+}
+
+/* 1280px - Katta ekranlar uchun (Desktop) */
+@media (max-width: 1280px) {
+  .menu-bar ul li {
+    width: 130px; /* Elementlar biroz kichrayadi */
+    margin: 10px;
+  }
+}
+
+/* 1024px - Planshet va kichik noutbuklar uchun */
+@media (max-width: 1024px) {
+  .menu-bar ul li {
+    width: 110px;
+    padding: 10px;
+  }
+  .menu-bar ul li a {
+    font-size: 14px;
+  }
+}
+
+/* 768px - Planshetlar uchun (Vertical) */
+@media (max-width: 768px) {
+  .menu-bar ul {
+    display: flex;
+    flex-wrap: wrap; /* Menyu sig'masa pastga tushadi */
+    justify-content: center;
+  }
+
+  .menu-bar ul li {
+    width: auto; /* Avtomatik kenglik */
+    padding: 10px 15px;
+  }
+
+  /* Sub-menu-2 (yon tomonga ochiladigan qismini pastga ochiladigan qilish) */
+  .hover-me:hover .sub-menu-2 {
+    position: relative;
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* 500px - Smartfonlar uchun */
+@media (max-width: 500px) {
+  .menu-bar {
+    text-align: left;
+  }
+
+  .menu-bar ul {
+    display: block; /* Menyu ustma-ust tushadi */
+  }
+
+  .menu-bar ul li {
+    width: 100%;
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .sub-menu-1 {
+    position: static !important; /* Mobil versiyada mutloq joylashuvni bekor qilamiz */
+  }
+
+  .menu-bar ul li:hover .sub-menu-1 {
+    position: static;
+    width: 100%;
+  }
+
+  .menu-bar ul li:hover .sub-menu-1 ul li {
+    width: 100%;
+    padding-left: 30px; /* Sub-menyu ichkaridan joylashishi uchun */
+  }
+}
