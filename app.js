@@ -83,7 +83,7 @@
 
 // let yigindi = 0;
 
-// for (let d = 1; d <= 100; d += 2) {
+// for (let d = 1; d <= 100; d++) {
 //   yigindi += d;
 // }
 
